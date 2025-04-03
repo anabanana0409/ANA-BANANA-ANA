@@ -1,0 +1,119 @@
+:root {
+    --cor-primaria: #2c3e50;
+    --cor-secundaria: #e9ecef;
+    --cor-destaque: #3498db;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+.secao-Festa-do-Divino {
+    background-color: var(--cor-secundaria);
+    padding: 50px 0;
+}
+
+.fundo-galeria {
+    background-color: var(--cor-secundaria);
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.inicio-fundo {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                url('https://upload.wikimedia.org/wikipedia/commons/9/9f/20.05.2018_Cairu_Boipeba_Festa_do_Divino_Esp%C3%ADrito_Santo_%2842264178461%29.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 100px 20px;
+    color: white;
+    border-radius: 15px;
+    margin: 20px 0;
+}
+
+.botao-inicio {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    background-color: var(--cor-destaque);
+    border: none;
+    padding: 12px 25px;
+}
+
+.botao-inicio:hover {
+    transform: scale(1.05);
+    background-color: #2980b9;
+}
+
+.img-inicio {
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.img-inicio:hover {
+    transform: scale(1.02);
+}
+
+/* Acessibilidade */
+.menu-acessibilidade {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.opcoes-acessibilidade {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.mostrar-opcoes {
+    display: flex !important;
+}
+
+/* Alto Contraste */
+.alto-contraste {
+    background-color: #000 !important;
+    color: #fff !important;
+}
+
+.alto-contraste a {
+    color: #ffbf47 !important;
+}
+
+.alto-contraste button {
+    background-color: #ffbf47 !important;
+    color: #000 !important;
+    border: 2px solid #fff !important;
+}
+
+.alto-contraste img {
+    filter: grayscale(100%) contrast(200%);
+}
+
+/* Focus visível para acessibilidade */
+*:focus {
+    outline: 3px solid #ffbf47 !important;
+    outline-offset: 2px;
+}
+
+@media (max-width: 768px) {
+    .inicio-fundo {
+        flex-direction: column;
+        text-align: center;
+        padding: 60px 20px;
+    }
+    
+    .img-inicio {
+        margin-top: 20px;
+        max-width: 100%;
+    }
+}
